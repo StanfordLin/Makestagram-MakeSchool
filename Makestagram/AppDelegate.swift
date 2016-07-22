@@ -36,6 +36,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("No logged in user :(")
         }
         
+        //ACL Access - allow public read access, only provide write access to user that created the object
+        let acl = PFACL()
+        acl.publicReadAccess = true
+        PFACL.setDefaultACL(acl, withAccessForCurrentUser: true)
+        
         return true
     }
 

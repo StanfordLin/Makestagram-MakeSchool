@@ -62,6 +62,9 @@ class Post: PFObject, PFSubclassing {
                 
                 // informs iOS that our background task is completed, called as soon as upload is finished. (API makes us reponsible for calling this)
                 UIApplication.sharedApplication().endBackgroundTask(self.photoUploadTask!)
+                }
+        }
     }
 }
-}
+
+
